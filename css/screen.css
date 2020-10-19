@@ -1,0 +1,19 @@
+html,
+body {
+  background-color: #615e5e;
+  background-size: 100%;
+  color: white;
+  font-family: "Montserrat";
+}
+
+h2 {
+  display: inline;
+}
+
+#Start {
+  margin: 10px;
+}
+
+/*#reset {
+  display: none;
+}*/
