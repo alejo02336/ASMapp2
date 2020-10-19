@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- My JS -->
+    <script src="main2.js"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/996973c893.js"></script>
+
+    <!-- Google Font -->
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    /> -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="styleAudio.css" />
+
+    <title>Pomodoro App</title>
+  </head>
+  <body onload="template()">
+    <div class="container">
+      <!-- Heading -->
+      <h1 class="text-center my-5 heading">Pomodoro Grupo-3</h1>
+      <!-- Main Timer -->
+      <div class="container timer">
+        <div class="row">
+          <div class="col-5">
+            <h4 id="minutos"></h4>
+          </div>
+          <div class="col-2">
+            <h4>:</h4>
+          </div>
+          <div class="col-5">
+            <h4 id="segundos"></h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finished Message -->
+      <div class="my-5"></div>
+
+      <!-- Start Button and reset button-->
+      <div class="conatiner d-flex justify-content-center my-5">
+        <button id="play-btn" class="btn" onclick="accionarBoton()">
+          <i id="play-btn-icon" class="fas fa-play fa-2x"></i>
+        </button>
+        <a href="index.html"><i class="fas fa-redo-alt fa-2x"></i></a>
+      </div>
+      <h3 id="done" class="text-center heading"></h3>
+    </div>
+
+    <p>RUIDOS</p>
+
+    <div class="itemA">
+      <div class="contenedor-principal">
+        <button
+          class="bAudio"
+          alt=" "
+          id="reproductor1"
+          onclick="PlayMusic('audio1','reproductor1','#slider1')"
+        ></button>
+        <audio src="audio/blanco.wav" id="audio1" loop></audio>
+        <div class="middle">
+          <div class="slider-container">
+            <span class="bar"><span class="fill"></span></span>
+            <input
+              id="slider1"
+              class="slider"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+            />
+          </div>
+        </div>
+        <div class="titulo-audio">BLANCO</div>
+      </div>
+    </div>
+
+    <div class="itemA">
+      <div class="contenedor-principal">
+        <button
+          class="bAudio"
+          alt=" "
+          id="reproductor2"
+          onclick="PlayMusic('audio2','reproductor2','#slider2')"
+        ></button>
+        <audio src="audio/rosa.mp3" id="audio2" loop></audio>
+        <div class="middle">
+          <div class="slider-container">
+            <span class="bar"><span class="fill"></span></span>
+            <input
+              id="slider2"
+              class="slider"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+            />
+          </div>
+        </div>
+        <div class="titulo-audio">ROSA</div>
+      </div>
+    </div>
+
+    <div class="itemA">
+      <div class="contenedor-principal">
+        <button
+          class="bAudio"
+          alt=" "
+          id="reproductor3"
+          onclick="PlayMusic('audio3','reproductor3','#slider3')"
+        ></button>
+        <audio src="audio/cafe.wav" id="audio3" loop></audio>
+        <div class="middle">
+          <div class="slider-container">
+            <span class="bar"><span class="fill"></span></span>
+            <input
+              id="slider3"
+              class="slider"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+            />
+          </div>
+        </div>
+        <div class="titulo-audio">CAFE</div>
+      </div>
+    </div>
+
+    <p>SONIDOS AMBIENTALES</p>
+
+    <div class="itemA">
+      <div class="contenedor-principal">
+        <button
+          class="bAudio"
+          alt=" "
+          id="reproductor4"
+          onclick="PlayMusic('audio4','reproductor4','#slider4')"
+        ></button>
+        <audio src="audio/lluvia.wav" id="audio4" loop></audio>
+        <div class="middle">
+          <div class="slider-container">
+            <span class="bar"><span class="fill"></span></span>
+            <input
+              id="slider4"
+              class="slider"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+            />
+          </div>
+        </div>
+        <div class="titulo-audio">LLUVIA</div>
+      </div>
+    </div>
+
+    <div class="itemA">
+      <div class="contenedor-principal">
+        <button
+          class="bAudio"
+          alt=" "
+          id="reproductor5"
+          onclick="PlayMusic('audio5','reproductor5','#slider5')"
+        ></button>
+        <audio src="audio/olas.wav" id="audio5" loop></audio>
+        <div class="middle">
+          <div class="slider-container">
+            <span class="bar"><span class="fill"></span></span>
+            <input
+              id="slider5"
+              class="slider"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+            />
+          </div>
+        </div>
+        <div class="titulo-audio">OLAS</div>
+      </div>
+    </div>
+
+    <div class="itemA">
+      <div class="contenedor-principal">
+        <button
+          class="bAudio"
+          alt=" "
+          id="reproductor6"
+          onclick="PlayMusic('audio6','reproductor6','#slider6')"
+        ></button>
+        <audio src="audio/viento.wav" id="audio6" loop></audio>
+        <div class="middle">
+          <div class="slider-container">
+            <span class="bar"><span class="fill"></span></span>
+            <input
+              id="slider6"
+              class="slider"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+            />
+          </div>
+        </div>
+        <div class="titulo-audio">VIENTO</div>
+      </div>
+    </div>
+
+
+    <div class="itemA">
+      <div class="contenedor-principal">
+        <button
+          class="bAudio"
+          alt=" "
+          id="reproductor7"
+          onclick="PlayMusic('audio7','reproductor7','#slider7')"
+        ></button>
+        <audio src="audio/rayo.mp3" id="audio7" loop></audio>
+        <div class="middle">
+          <div class="slider-container">
+            <span class="bar"><span class="fill"></span></span>
+            <input
+              id="slider7"
+              class="slider"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+            />
+          </div>
+        </div>
+        <div class="titulo-audio">RAYOS</div>
+      </div>
+    </div>
+
+    <div class="itemA">
+      <div class="contenedor-principal">
+        <button
+          class="bAudio"
+          alt=" "
+          id="reproductor8"
+          onclick="PlayMusic('audio8','reproductor8','#slider8')"
+        ></button>
+        <audio src="audio/fuego.wav" id="audio8" loop></audio>
+        <div class="middle">
+          <div class="slider-container">
+            <span class="bar"><span class="fill"></span></span>
+            <input
+              id="slider8"
+              class="slider"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+            />
+          </div>
+        </div>
+        <div class="titulo-audio">FUEGO</div>
+      </div>
+    </div>
+
+
+    <div class="itemA">
+      <div class="contenedor-principal">
+        <button
+          class="bAudio"
+          alt=" "
+          id="reproductor9"
+          onclick="PlayMusic('audio9','reproductor9','#slider9')"
+        ></button>
+        <audio src="audio/pajaros.wav" id="audio9" loop></audio>
+        <div class="middle">
+          <div class="slider-container">
+            <span class="bar"><span class="fill"></span></span>
+            <input
+              id="slider9"
+              class="slider"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+            />
+          </div>
+        </div>
+        <div class="titulo-audio">AVES</div>
+      </div>
+    </div>
+
+
+    <script>
+      window.onload(actualizarUI());
+    </script>
+  </body>
+  <script src="control.js"></script>
+</html>
